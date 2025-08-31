@@ -18,7 +18,7 @@ registerBtn.addEventListener("click", function (e) {
         message.style.display = "block"
         setTimeout(() => {
             window.location = "login.html"
-        }, 1000)
+        }, 1500)
     }
 })
 
