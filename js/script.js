@@ -207,7 +207,7 @@ let inner_carts_products = document.querySelector(".inner_carts_products")
 function ShowItems() {
 
     inner_carts_products.innerHTML = "";
-    addedItem.map((item, index) => {
+    addedItem.forEach((item) => {
         if (cartProductDiv != "") {
             inner_carts_products.innerHTML += `
         <div class="cart_item">${item.title} - ${item.price} <br>

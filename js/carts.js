@@ -26,7 +26,7 @@ let addedItem = localStorage.getItem("ProductInCart") ? JSON.parse(localStorage.
 function ShowItems() {
 
     inner_carts_products.innerHTML = "";
-    addedItem.map((item, index) => {
+    addedItem.forEach((item) => {
         if (cartProductDiv != "") {
             inner_carts_products.innerHTML += `
         <div class="cart_item">${item.title} - ${item.price} <br>
@@ -140,7 +140,7 @@ function opencart(e) {
 
 
 function drawCartProducts(products) {
-    let y = products.map((item, index) => {
+    let y = products.map((item) => {
         return `
         <div class="product_item">
                     <img class="prodect_item_img" src="${item.imageUrl}" alt="">
