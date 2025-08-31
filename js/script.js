@@ -212,9 +212,9 @@ function ShowItems() {
             inner_carts_products.innerHTML += `
         <div class="cart_item">${item.title} - ${item.price} <br>
             <div class="counter">
-                <button class="increment" data-index=${index}>+</button>
+                <button class="increment" data-id=${item.id}>+</button>
                 <p class="quan-${item.id}">${item.quantity}</p>
-                <button class="decrement" data-index=${index}>-</button>
+                <button class="decrement" data-id=${item.id}>-</button>
             </div>
         </div>
     `;
@@ -226,36 +226,39 @@ function ShowItems() {
     });
 
     ///////////////////
-    let inc = document.querySelectorAll(".increment")
 
+    let inc = document.querySelectorAll(".increment");
     inc.forEach(element => {
-
         element.addEventListener("click", function () {
-            let index = element.getAttribute("data-index");
-            addedItem[index].quantity += 1;
-            localStorage.setItem("ProductInCart", JSON.stringify(addedItem))
-            addedItem = localStorage.getItem("ProductInCart") ? JSON.parse(localStorage.getItem("ProductInCart")) : [];
+            let id = parseInt(element.getAttribute("data-id"));
+            let product = addedItem.find(item => item.id === id);
+            product.quantity += 1;
 
-            ShowItems()
-        })
+            localStorage.setItem("ProductInCart", JSON.stringify(addedItem));
+            ShowItems();
+            drawCartProducts(addedItem);
+            TotalPrice();
+        });
     });
 
-    let dec = document.querySelectorAll(".decrement")
-
+    let dec = document.querySelectorAll(".decrement");
     dec.forEach(element => {
         element.addEventListener("click", function () {
-            let index = element.getAttribute("data-index");
-            if (addedItem[index].quantity > 1) {
-                addedItem[index].quantity -= 1;
+            let id = parseInt(element.getAttribute("data-id"));
+            let product = addedItem.find(item => item.id === id);
+            if (product.quantity > 1) {
+                product.quantity -= 1;
+            } else {
+                addedItem = addedItem.filter(item => item.id !== id);
             }
-            else {
-                addedItem.splice(index, 1);
-            }
-            localStorage.setItem("ProductInCart", JSON.stringify(addedItem))
-            addedItem = localStorage.getItem("ProductInCart") ? JSON.parse(localStorage.getItem("ProductInCart")) : [];
-            ShowItems()
-        })
+
+            localStorage.setItem("ProductInCart", JSON.stringify(addedItem));
+            ShowItems();
+            drawCartProducts(addedItem);
+            TotalPrice();
+        });
     });
+
     badge.style.display = "block";
     let totalQuantity = addedItem.reduce((sum, item) => sum + item.quantity, 0);
     badge.innerHTML = totalQuantity;
