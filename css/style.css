@@ -312,13 +312,17 @@ nav ul#user_info {
     margin-bottom: 20px;
     text-align: center;
     padding: 10px;
-    transition: 0.6s all ease-in-out;
+
     border-radius: 15px;
     backdrop-filter: blur(3px);
 
 }
 
-.product_item:hover {
+.homeItem {
+    transition: 0.6s all ease-in-out;
+}
+
+.homeItem:hover {
     transform: scale(1.02);
     box-shadow: 2px 5px 17px 10px rgba(255, 255, 255, 0.724);
 

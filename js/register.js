@@ -1,4 +1,5 @@
 let username = document.querySelector("#username")
+let lastname = document.querySelector("#lastname")
 let email = document.querySelector("#email")
 let password = document.querySelector("#password")
 
@@ -18,7 +19,7 @@ registerBtn.addEventListener("click", function (e) {
         message.style.display = "block"
         setTimeout(() => {
             window.location = "login.html"
-        }, 1500)
+        }, 1700)
     }
 })
 
@@ -29,6 +30,14 @@ email.addEventListener("focus", function () {
 })
 email.addEventListener("blur", function () {
     email.placeholder = "Enter email"
+})
+lastname.addEventListener("focus", function () {
+    lastname.placeholder = ""
+    lastname.style.fontWeight = "600"
+    lastname.style.color = "white"
+})
+lastname.addEventListener("blur", function () {
+    lastname.placeholder = "Enter lastname"
 })
 username.addEventListener("focus", function () {
     username.placeholder = ""

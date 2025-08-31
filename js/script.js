@@ -133,7 +133,7 @@ function drawItems(products) {
 
 
         return `
-        <div class="product_item col-md-3">
+        <div class="product_item homeItem">
                     <img class="prodect_item_img" src="${item.imageUrl}" alt="">
                     <div class="product_item_desc">
                         <h2>${item.title}</h2>

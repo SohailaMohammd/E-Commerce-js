@@ -22,7 +22,7 @@ loginBtn.addEventListener("click", function (e) {
 
             setTimeout(() => {
                 window.location = "index.html"
-            }, 1200)
+            }, 1500)
         }
         else {
             alert("Somethin Wrong")
