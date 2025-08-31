@@ -7,6 +7,7 @@ let allFavProducts = document.querySelector(".FavProducts")
 if (ProductsInCart) {
     let item = JSON.parse(ProductsInCart)
     drawCartProducts(item)
+    // addedItem = item
 }
 if (ProductInFav) {
     let favItem = JSON.parse(ProductInFav)
@@ -26,7 +27,7 @@ let addedItem = localStorage.getItem("ProductInCart") ? JSON.parse(localStorage.
 function ShowItems() {
 
     inner_carts_products.innerHTML = "";
-    addedItem.forEach((item) => {
+    addedItem.map((item) => {
         if (cartProductDiv != "") {
             inner_carts_products.innerHTML += `
         <div class="cart_item">${item.title} - ${item.price} <br>
@@ -83,7 +84,6 @@ function ShowItems() {
     badge.innerHTML = totalQuantity;
 
 }
-ShowItems()
 TotalPrice()
 
 if (localStorage.getItem("username")) {

@@ -232,7 +232,7 @@ function ShowItems() {
         element.addEventListener("click", function () {
             let id = parseInt(element.getAttribute("data-id"));
             let product = addedItem.find(item => item.id === id);
-            product.quantity += 1;
+            product.quantity += 0;
 
             localStorage.setItem("ProductInCart", JSON.stringify(addedItem));
             ShowItems();
