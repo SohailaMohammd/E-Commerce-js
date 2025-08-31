@@ -1,0 +1,528 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+body {
+    font-family: "Kotta One", system-ui !important;
+    font-weight: 600;
+    font-style: normal;
+    background: #dabaff52;
+}
+
+.container {
+    width: 80%;
+    margin: auto;
+}
+
+header {
+    height: 80px;
+    padding: 5px 0;
+    background-color: #dabaff00;
+    box-shadow: 0px 1px 10px 2px rgba(255, 255, 255, 0.968);
+}
+
+.header-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    width: 160px;
+    height: 60px;
+}
+
+.image {
+    position: relative;
+}
+
+.header-content .brand {
+    position: absolute;
+    bottom: 0;
+    right: 52px;
+    text-decoration: none;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+    justify-content: space-between;
+}
+
+nav li a {
+    display: block;
+    color: rgb(112, 2, 152);
+    min-width: 80px;
+    padding: 5px;
+    margin: 0px 5px;
+    text-decoration: none;
+}
+
+.login {
+
+    background: -webkit-linear-gradient(bottom, rgb(156, 2, 227), rgb(210, 129, 245));
+    border: 2px solid rgb(156, 2, 227);
+    border-radius: 5px;
+    padding: 7px;
+    text-decoration: none;
+    margin-right: 15px;
+    cursor: pointer;
+
+    a {
+        color: white;
+        text-decoration: none;
+        text-align: center;
+
+    }
+}
+
+.login:hover {
+    background: none;
+
+    a {
+        color: rgb(126, 3, 183);
+    }
+}
+
+.register {
+
+    border: 2px solid rgb(126, 3, 183);
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+
+    a {
+        color: rgb(126, 3, 183);
+        text-decoration: none;
+        text-align: center;
+    }
+}
+
+.register:hover {
+    background: -webkit-linear-gradient(bottom, rgb(156, 2, 227), rgb(210, 129, 245));
+
+
+    a {
+        color: white;
+    }
+}
+
+.logOut {
+    border: 2px solid red;
+    border-radius: 5px;
+    padding: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    color: white;
+    text-align: center;
+    background-color: red;
+    transition: 0.3s all ease-in;
+}
+.logOut:hover{
+    transform: scale(1.03);
+}
+
+/* ****************************Search******************* */
+.search {
+    width: 80%;
+    margin: auto;
+}
+
+.content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.select {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 20%;
+}
+
+.input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    width: 63%;
+}
+
+.searchBtn {
+    padding: 10px;
+    background: -webkit-linear-gradient(bottom, #320062, #b576ff);
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+    outline: none;
+    width: 10%;
+    margin: 20px 0px;
+    font-family: "Kotta One", system-ui !important;
+    font-weight: 600;
+    font-style: normal;
+    cursor: pointer;
+}
+
+/* **********************form***************************** */
+
+.loginbody {
+    background: url('../Images/milky-way-4526277_1920.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 90vh;
+}
+
+.section-form {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 40%;
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    backdrop-filter: blur(3px);
+    border: 4px solid #ffffff;
+    border-radius: 15px;
+    box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.6);
+    /* background: #ffffff45; */
+}
+
+.section-form h2 {
+    font-size: 40px;
+    letter-spacing: 2px;
+    color: rgb(255, 255, 255);
+    text-transform: capitalize;
+    margin-bottom: 70px;
+}
+
+.section-form form input {
+    display: block;
+    width: 100%;
+    margin: 25px 0;
+    height: 40px;
+    border: none;
+
+    outline: none;
+    background: #ffffff26;
+    backdrop-filter: blur(95px);
+    border-radius: 25px;
+    padding: 18px;
+}
+
+.section-form form input::placeholder {
+    color: rgba(255, 255, 255, 0.788);
+    font-family: "Kotta One", system-ui !important;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.email,
+.pass,
+.user {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.fa-envelope,
+.fa-lock,
+.fa-user {
+    position: absolute;
+    right: 0;
+    color: rgb(255, 255, 255);
+    margin-right: 20px;
+}
+
+.section-form form input[type="submit"] {
+    font-size: 20px;
+    text-transform: uppercase;
+    height: auto;
+    cursor: pointer;
+    border: none;
+    padding: 10px;
+    background: -webkit-linear-gradient(bottom, #320062, #b576ff);
+    color: white;
+    border-radius: 30px;
+    box-shadow: 0px 2px 1px 1px rgba(255, 255, 255, 0.6);
+    transition: 0.3s all ease-in;
+    font-family: "Kotta One", system-ui !important;
+    font-weight: 600;
+    font-style: normal;
+}
+
+.section-form form input[type="submit"]:hover {
+    transform: scale(1.02);
+}
+
+.word {
+    color: rgb(255, 255, 255);
+    padding-right: 9px;
+}
+
+.reg {
+    color: #ffffff;
+    font-weight: 700;
+}
+
+nav ul#user_info {
+    display: none;
+}
+
+/* /////////////////////////////////// */
+
+.products,
+.FavProducts {
+    width: 100%;
+    margin: 10px 0;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+}
+
+.product_item {
+    width: 100%;
+    border: 4px solid #fefefe;
+    min-height: 150px;
+    margin-bottom: 20px;
+    text-align: center;
+    padding: 10px;
+    transition: 0.6s all ease-in-out;
+    border-radius: 15px;
+    backdrop-filter: blur(3px);
+
+}
+
+.product_item:hover {
+    transform: scale(1.02);
+    box-shadow: 2px 5px 17px 10px rgba(255, 255, 255, 0.724);
+
+}
+
+.prodect_item_img {
+    max-width: 100%;
+    height: 250px;
+    display: block;
+    margin: 0px auto 10px;
+    width: 100%;
+    object-fit: cover;
+
+}
+
+.product_item_action {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    margin: 15px;
+}
+
+.product_item .add_to_cart {
+    display: block;
+    background-color: green;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: "Kotta One", system-ui !important;
+}
+
+.product_item .remove_to_cart {
+    display: block;
+    background-color: red;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    cursor: pointer;
+    font-family: "Kotta One", system-ui !important;
+}
+
+.product_item .fav {
+    cursor: pointer;
+    display: block;
+    width: 50px;
+}
+
+.fa-heart {
+    cursor: pointer;
+    font-size: 20px;
+}
+
+.product_item_desc h2,
+p,
+span {
+    margin: 10px 0px;
+}
+
+/* ///////////////////////////////////////////////////// */
+nav ul#user_info li i {
+    color: rgb(112, 2, 152);
+    font-size: 25px;
+    cursor: pointer;
+
+}
+
+nav ul#user_info li {
+    margin: 0 10px;
+    position: relative;
+
+}
+
+nav ul#user_info li .badge {
+    position: absolute;
+    width: 19px;
+    height: 19px;
+    border-radius: 50%;
+    background-color: red;
+    color: white;
+    text-align: center;
+    display: block;
+    top: -17px;
+    right: -10px;
+    font-size: 14px;
+    display: none;
+
+}
+
+/* ///////////////////////////////////////////////////// */
+
+.carts_products {
+    position: absolute;
+    width: 230px;
+    transform: translate(-40px, 0);
+    top: 56px;
+    padding: 10px;
+    border: 3px solid #b676ff6b;
+    border-radius: 15px;
+    display: none;
+    backdrop-filter: blur(15px);
+    z-index: 1;
+}
+
+.carts_products.active {
+    display: block;
+}
+
+.carts_products a {
+    display: block;
+    color: white;
+    margin: 4px 0;
+    text-align: center;
+    text-decoration: none;
+    font-family: "Kotta One", system-ui !important;
+    font-weight: 600;
+    font-style: normal;
+    background-color: #7901c4;
+}
+
+.decrease {
+    background-color: red;
+    cursor: pointer;
+}
+
+.counter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin: 10px 0
+}
+
+.increment,
+.decrement {
+    background-color: #fcb5f284;
+    border: none;
+    color: rgb(0, 0, 0);
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0px 2px 2px 1px rgb(0 0 0 / 53%);
+    width: 20px;
+    border-radius: 3px;
+}
+
+.cart_item {
+    background-color: #dddddd3d;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.53);
+    text-align: center;
+    padding: 10px;
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+}
+
+/* ///////////////////////////// */
+
+.message {
+    position: fixed;
+    top: -80px;
+    left: 50%;
+    width: 50%;
+    transform: translateX(-50%);
+    background: #5201c4;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 18px;
+    animation: Firstchange 2s ease forwards;
+    z-index: 10;
+    display: none;
+
+    i {
+        color: white;
+    }
+}
+
+@keyframes Firstchange {
+    0% {
+        top: -80px;
+        opacity: 0;
+    }
+
+    20% {
+        top: -80px;
+        opacity: 0;
+    }
+
+    80% {
+        top: -80px;
+        opacity: 1;
+    }
+
+    100% {
+        top: -80px;
+        opacity: 0;
+    }
+}
+
+/* ////////////////////////////////////// */
+
+.price {
+    text-align: center;
+    margin: 62px;
+    border: 3px solid #ffffff;
+    padding: 10px;
+    border-radius: 10px;
+    font-size: 21px;
+    box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.53);
+    display: none;
+}
+
+.total {
+    display: inline-block;
+    color: red;
+    font-weight: 800;
+}
