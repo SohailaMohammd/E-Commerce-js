@@ -7,7 +7,7 @@ let links = document.querySelector("#links")
 if (localStorage.getItem("username")) {
     links.remove()
     userInfo.style.display = "flex"
-    userData.innerHTML = localStorage.getItem("username")
+    userData.innerHTML = "Hello, " + localStorage.getItem("username")
 }
 //////////////////////////////////////////
 

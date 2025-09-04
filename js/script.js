@@ -137,7 +137,7 @@ function drawItems(products) {
                     <img class="prodect_item_img" src="${item.imageUrl}" alt="">
                     <div class="product_item_desc">
                         <h2>${item.title}</h2>
-                        <p>Price: ${item.price}</p>
+                        <p>Price: ${item.price}$</p>
                         <span>category : ${item.category}</span>
                     </div>
                     <div class="product_item_action">
@@ -210,11 +210,11 @@ function ShowItems() {
     addedItem.forEach((item) => {
         if (cartProductDiv != "") {
             inner_carts_products.innerHTML += `
-        <div class="cart_item">${item.title} - ${item.price} <br>
+        <div class="cart_item"><div class="data"><p>${item.title}</p> <p>Price: ${item.price}$</p> </div>  
             <div class="counter">
-                <button class="increment" data-id=${item.id}>+</button>
+                <button class="increment" data-id=${item.id}><i class="fa-solid fa-plus"></i></button>
                 <p class="quan-${item.id}">${item.quantity}</p>
-                <button class="decrement" data-id=${item.id}>-</button>
+                <button class="decrement" data-id=${item.id}><i class="fa-solid fa-minus"></i></button>
             </div>
         </div>
     `;
@@ -232,12 +232,11 @@ function ShowItems() {
         element.addEventListener("click", function () {
             let id = parseInt(element.getAttribute("data-id"));
             let product = addedItem.find(item => item.id === id);
-            product.quantity += 0;
+            product.quantity += 1;
 
             localStorage.setItem("ProductInCart", JSON.stringify(addedItem));
             ShowItems();
-            drawCartProducts(addedItem);
-            TotalPrice();
+
         });
     });
 
@@ -254,8 +253,7 @@ function ShowItems() {
 
             localStorage.setItem("ProductInCart", JSON.stringify(addedItem));
             ShowItems();
-            drawCartProducts(addedItem);
-            TotalPrice();
+
         });
     });
 
