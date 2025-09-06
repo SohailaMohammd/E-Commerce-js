@@ -9,7 +9,7 @@ body {
     font-family: "Kotta One", system-ui !important;
     font-weight: 600;
     font-style: normal;
-    background: #e5d3f952;
+    background: #e7e2ffb1;
 }
 
 .container {
@@ -62,9 +62,8 @@ nav li a {
 }
 
 .login {
-
-    background: -webkit-linear-gradient(bottom, rgb(156, 2, 227), rgb(210, 129, 245));
-    border: 2px solid rgb(156, 2, 227);
+    background: -webkit-linear-gradient(bottom, #4f0099, #b576ff);
+    border: 2px solid #4f0099;
     border-radius: 5px;
     padding: 7px;
     text-decoration: none;
@@ -83,28 +82,27 @@ nav li a {
     background: none;
 
     a {
-        color: rgb(85, 1, 115);
+        color: #4f0099;
     }
 }
 
 .register {
 
-    border: 2px solid rgb(85, 1, 115);
+    border: 2px solid #4f0099;
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
     cursor: pointer;
 
     a {
-        color: rgb(85, 1, 115);
+        color: #4f0099;
         text-decoration: none;
         text-align: center;
     }
 }
 
 .register:hover {
-    background: -webkit-linear-gradient(bottom, rgb(156, 2, 227), rgb(210, 129, 245));
-
+    background: -webkit-linear-gradient(bottom, #4f0099, #b576ff);
 
     a {
         color: white;
@@ -603,6 +601,6 @@ nav ul#user_info li .badge {
 
 .total {
     display: inline-block;
-    color:rgb(204, 1, 1);
+    color: rgb(204, 1, 1);
     font-weight: 800;
 }
