@@ -9,7 +9,7 @@ body {
     font-family: "Kotta One", system-ui !important;
     font-weight: 600;
     font-style: normal;
-    background: #dabaff52;
+    background: #e5d3f952;
 }
 
 .container {
@@ -54,7 +54,7 @@ nav ul {
 
 nav li a {
     display: block;
-    color: rgb(112, 2, 152);
+    color: rgb(85, 1, 115);
     min-width: 80px;
     padding: 5px;
     margin: 0px 5px;
@@ -83,20 +83,20 @@ nav li a {
     background: none;
 
     a {
-        color: rgb(126, 3, 183);
+        color: rgb(85, 1, 115);
     }
 }
 
 .register {
 
-    border: 2px solid rgb(126, 3, 183);
+    border: 2px solid rgb(85, 1, 115);
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
     cursor: pointer;
 
     a {
-        color: rgb(126, 3, 183);
+        color: rgb(85, 1, 115);
         text-decoration: none;
         text-align: center;
     }
@@ -112,14 +112,14 @@ nav li a {
 }
 
 .logOut {
-    border: 2px solid red;
+    border: 2px solid rgb(204, 1, 1);
     border-radius: 5px;
     padding: 5px;
     text-decoration: none;
     cursor: pointer;
     color: white;
     text-align: center;
-    background-color: red;
+    background-color: rgb(204, 1, 1);
     transition: 0.3s all ease-in;
 }
 
@@ -386,7 +386,7 @@ nav ul#user_info {
 
 .product_item .add_to_cart {
     display: block;
-    background-color: green;
+    background-color: rgb(11, 95, 11);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -398,7 +398,7 @@ nav ul#user_info {
 
 .product_item .remove_to_cart {
     display: block;
-    background-color: red;
+    background-color: rgb(204, 1, 1);
     color: white;
     border: none;
     padding: 10px 20px;
@@ -603,6 +603,6 @@ nav ul#user_info li .badge {
 
 .total {
     display: inline-block;
-    color: red;
+    color:rgb(204, 1, 1);
     font-weight: 800;
 }
